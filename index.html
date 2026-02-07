@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>印度支付 - 最全支付资讯 - 专业一站式支付服务</title>
+  <meta name="description" content="印度支付提供全方位支付服务平台，覆盖印度、印尼、越南、泰国等17国支付通道，专业三方支付对接与游戏通道服务。Telegram: @zfxt5" />
+  <link rel="canonical" href="https://indiapmt.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="印度支付 - 专业一站式支付服务" />
+  <meta property="og:title" content="印度支付 - 最全支付资讯 - 专业一站式支付服务" />
+  <meta property="og:description" content="覆盖印度、印尼、越南、泰国等17国支付通道，专业三方支付对接与游戏通道服务。" />
+  <meta property="og:url" content="https://indiapmt.com/" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="印度支付 - 最全支付资讯 - 专业一站式支付服务" />
+  <meta name="twitter:description" content="覆盖17国支付通道，专业三方支付对接与游戏通道服务。" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2ECC71',
+            'primary-dark': '#27AE60',
+            'deep-sea': '#0A1628',
+            'deep-navy': '#0F172A',
+            'ocean-blue': '#1E3A8A',
+            'electric-blue': '#3B82F6',
+            'sea-foam': '#A3E635',
+            'coral-pink': '#FDA4AF',
+            'tropical-teal': '#2DD4BF',
+            'sunset-orange': '#FB923C',
+            'ghost-white': '#F8FAFC',
+            'slate-text': '#334155',
+          },
+          fontFamily: {
+            heading: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            body: ['"Inter"', 'system-ui', 'sans-serif'],
+          },
+          borderRadius: { '4xl': '2rem' },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'float-delayed': 'float 6s ease-in-out 2s infinite',
+            'bubble': 'bubble 8s ease-in-out infinite',
+            'pulse-glow': 'pulseGlow 3s ease-in-out infinite',
+            'slide-up': 'slideUp 0.8s ease-out forwards',
+            'fade-in': 'fadeIn 1s ease-out forwards',
+          },
+          keyframes: {
+            float: { '0%, 100%': { transform: 'translateY(0px)' }, '50%': { transform: 'translateY(-20px)' } },
+            bubble: { '0%': { transform: 'translateY(100vh) scale(0)', opacity: '0' }, '50%': { opacity: '0.6' }, '100%': { transform: 'translateY(-10vh) scale(1)', opacity: '0' } },
+            pulseGlow: { '0%, 100%': { boxShadow: '0 0 20px rgba(46,204,113,0.3)' }, '50%': { boxShadow: '0 0 40px rgba(46,204,113,0.6)' } },
+            slideUp: { '0%': { transform: 'translateY(40px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } },
+            fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',system-ui,sans-serif}
+    ::-webkit-scrollbar{width:8px}::-webkit-scrollbar-track{background:#0A1628}::-webkit-scrollbar-thumb{background:#2ECC71;border-radius:4px}
+    .gradient-text{background:linear-gradient(135deg,#2ECC71,#2DD4BF,#3B82F6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .glass-card{background:rgba(255,255,255,0.05);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.1)}
+    .hover-lift{transition:transform .3s ease,box-shadow .3s ease}.hover-lift:hover{transform:translateY(-8px);box-shadow:0 20px 60px rgba(46,204,113,0.15)}
+    .hero-gradient{background:radial-gradient(ellipse at 50% 0%,rgba(46,204,113,0.15) 0%,transparent 60%),radial-gradient(ellipse at 80% 50%,rgba(59,130,246,0.1) 0%,transparent 50%),radial-gradient(ellipse at 20% 80%,rgba(45,212,191,0.08) 0%,transparent 50%),linear-gradient(180deg,#0A1628 0%,#0F172A 50%,#1E3A8A 100%)}
+    .bubble-container{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+    .bubble{position:absolute;border-radius:50%;background:radial-gradient(circle at 30% 30%,rgba(46,204,113,0.3),rgba(46,204,113,0.05));animation:bubble linear infinite}
+    .observe-section{opacity:0;transform:translateY(30px);transition:opacity .8s ease-out,transform .8s ease-out}.observe-section.visible{opacity:1;transform:translateY(0)}
+    .navbar-scrolled{background:rgba(10,22,40,0.95)!important;box-shadow:0 4px 30px rgba(0,0,0,0.3)}
+    .counter-box{position:relative}.counter-box::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:60px;height:3px;background:linear-gradient(90deg,transparent,#2ECC71,transparent);border-radius:2px}
+    .cta-glow{position:relative;overflow:hidden}.cta-glow::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:conic-gradient(transparent,rgba(255,255,255,0.1),transparent 30%);animation:spin 4s linear infinite}
+    @keyframes spin{100%{transform:rotate(360deg)}}
+    /* Mega dropdown */
+    .mega-dropdown{opacity:0;visibility:hidden;transform:translateY(10px);transition:all .25s ease;pointer-events:none}
+    .dropdown-parent:hover .mega-dropdown{opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto}
+    .dropdown-parent:hover>a,.dropdown-parent:hover>button{color:#fff;background:rgba(255,255,255,0.1)}
+    /* Telegram floating badge */
+    .tg-float{animation:tgPulse 2s ease-in-out infinite}
+    @keyframes tgPulse{0%,100%{box-shadow:0 0 0 0 rgba(46,204,113,0.4)}50%{box-shadow:0 0 0 12px rgba(46,204,113,0)}}
+    /* CTA text via CSS content – keeps keyword density clean */
+    .cta-consult::after{content:'立即咨询'}
+    .cta-tg-hero::after{content:'Telegram 咨询 @zfxt5'}
+    .cta-tg-cta::after{content:'Telegram @zfxt5 立即咨询'}
+    .cta-tg-dropdown::after{content:'咨询 @zfxt5'}
+    .cta-readmore::after{content:'了解更多'}
+    .cta-tg-about::after{content:'Telegram联系我们 @zfxt5'}
+  </style>
+</head>
+<body class="bg-deep-sea text-white font-body antialiased">
+
+  <!-- Bubbles -->
+  <div class="bubble-container fixed inset-0 z-0">
+    <div class="bubble" style="width:12px;height:12px;left:10%;animation-duration:12s;bottom:-20px"></div>
+    <div class="bubble" style="width:8px;height:8px;left:25%;animation-duration:15s;animation-delay:2s;bottom:-20px"></div>
+    <div class="bubble" style="width:16px;height:16px;left:45%;animation-duration:10s;animation-delay:4s;bottom:-20px"></div>
+    <div class="bubble" style="width:6px;height:6px;left:65%;animation-duration:18s;animation-delay:1s;bottom:-20px"></div>
+    <div class="bubble" style="width:10px;height:10px;left:80%;animation-duration:14s;animation-delay:3s;bottom:-20px"></div>
+    <div class="bubble" style="width:14px;height:14px;left:90%;animation-duration:11s;animation-delay:5s;bottom:-20px"></div>
+  </div>
+
+  <!-- ========== NAVBAR WITH MEGA DROPDOWN ========== -->
+  <nav id="navbar" class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-6xl">
+    <div class="glass-card rounded-2xl px-6 py-3 flex items-center justify-between transition-all duration-300">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3 group flex-shrink-0">
+        <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center transition-transform group-hover:scale-110">
+          <svg class="w-6 h-6 text-deep-navy" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+        </div>
+        <span class="font-heading font-bold text-lg hidden sm:block">印度支付</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <div class="hidden lg:flex items-center gap-1">
+        <a href="index.html" class="px-3 py-2 rounded-xl text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-all">首页</a>
+        <a href="#about" class="px-3 py-2 rounded-xl text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-all">关于</a>
+
+        <!-- Dropdown: 支付通道 -->
+        <div class="dropdown-parent relative">
+          <button class="px-3 py-2 rounded-xl text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-all flex items-center gap-1">
+            支付通道
+            <svg class="w-3.5 h-3.5 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <!-- Mega Dropdown Panel -->
+          <div class="mega-dropdown absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[700px] glass-card rounded-2xl p-6 shadow-2xl shadow-black/30">
+            <div class="grid grid-cols-4 gap-6">
+              <!-- 南亚 -->
+              <div>
+                <h4 class="text-xs font-bold text-primary uppercase tracking-wider mb-3">南亚</h4>
+                <ul class="space-y-1.5">
+                  <li><a href="payments/india.html" class="text-sm text-white/60 hover:text-primary transition-colors flex items-center gap-1.5"><span>🇮🇳</span>印度支付</a></li>
+                  <li><a href="payments/pakistan.html" class="text-sm text-white/60 hover:text-primary transition-colors flex items-center gap-1.5"><span>🇵🇰</span>巴基斯坦支付</a></li>
+                  <li><a href="payments/bangladesh.html" class="text-sm text-white/60 hover:text-primary transition-colors flex items-center gap-1.5"><span>🇧🇩</span>孟加拉支付</a></li>
+                </ul>
+              </div>
+              <!-- 东南亚 -->
+              <div>
+                <h4 class="text-xs font-bold text-electric-blue uppercase tracking-wider mb-3">东南亚</h4>
+                <ul class="space-y-1.5">
+                  <li><a href="payments/indonesia.html" class="text-sm text-white/60 hover:text-primary transition-colors flex items-center gap-1.5"><span>🇮🇩</span>印尼支付</a></li>
+                  <li><a href="payments/vietnam.html" class="text-sm text-white/60 hover:text-primary transition-colors flex items-center gap-1.5"><span>🇻🇳</span>越南支付</a></li>
+                  <li><a href="payments/philippines.html" class="text-sm text-white/60 hover:text-primary transition-colors flex items-center gap-1.5"><span>🇵🇭</span>菲律宾支付</a></li>
+                  <li><a href="payments/thailand.html" class="text-sm text-white/60 hover:text-primary transition-colors flex items-center gap-1.5"><span>🇹🇭</span>泰国支付</a></li>
+                </ul>
+              </div>
+              <!-- 拉美 & 中东 -->
+              <div>
+                <h4 class="text-xs font-bold text-sunset-orange uppercase tracking-wider mb-3">拉美</h4>
+                <ul class="space-y-1.5">
+                  <li><a href="payments/brazil.html" class="text-sm text-white/60 hover:text-primary transition-colors flex items-center gap-1.5"><span>🇧🇷</span>巴西支付</a></li>
+                  <li><a href="payments/mexico.html" class="text-sm text-white/60 hover:text-primary transition-colors flex items-center gap-1.5"><span>🇲🇽</span>墨西哥支付</a></li>
+                </ul>
+                <h4 class="text-xs font-bold text-coral-pink uppercase tracking-wider mb-3 mt-4">中东</h4>
+                <ul class="space-y-1.5">
+                  <li><a href="payments/turkey.html" class="text-sm text-white/60 hover:text-primary transition-colors flex items-center gap-1.5"><span>🇹🇷</span>土耳其支付</a></li>
+                  <li><a href="payments/iran.html" class="text-sm text-white/60 hover:text-primary transition-colors flex items-center gap-1.5"><span>🇮🇷</span>伊朗支付</a></li>
+                  <li><a href="payments/egypt.html" class="text-sm text-white/60 hover:text-primary transition-colors flex items-center gap-1.5"><span>🇪🇬</span>埃及支付</a></li>
+                </ul>
+              </div>
+              <!-- 非洲 -->
+              <div>
+                <h4 class="text-xs font-bold text-tropical-teal uppercase tracking-wider mb-3">非洲</h4>
+                <ul class="space-y-1.5">
+                  <li><a href="payments/nigeria.html" class="text-sm text-white/60 hover:text-primary transition-colors flex items-center gap-1.5"><span>🇳🇬</span>尼日利亚支付</a></li>
+                  <li><a href="payments/south-africa.html" class="text-sm text-white/60 hover:text-primary transition-colors flex items-center gap-1.5"><span>🇿🇦</span>南非支付</a></li>
+                  <li><a href="payments/kenya.html" class="text-sm text-white/60 hover:text-primary transition-colors flex items-center gap-1.5"><span>🇰🇪</span>肯尼亚支付</a></li>
+                  <li><a href="payments/ethiopia.html" class="text-sm text-white/60 hover:text-primary transition-colors flex items-center gap-1.5"><span>🇪🇹</span>埃塞俄比亚支付</a></li>
+                  <li><a href="payments/congo.html" class="text-sm text-white/60 hover:text-primary transition-colors flex items-center gap-1.5"><span>🇨🇩</span>刚果支付</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- Dropdown CTA -->
+            <div class="mt-5 pt-4 border-t border-white/5 flex items-center justify-between">
+              <span class="text-xs text-white/30">覆盖全球17国支付通道 · 三方支付 · 游戏通道对接</span>
+              <a href="https://t.me/zfxt5" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-primary-dark transition-colors">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.53 8.15l-1.83 8.66c-.14.62-.5.77-.99.48l-2.76-2.04-1.33 1.28c-.15.15-.27.27-.56.27l.2-2.8 5.1-4.6c.22-.2-.05-.3-.34-.12l-6.31 3.97-2.72-.85c-.59-.19-.6-.59.12-.88l10.63-4.1c.5-.18.93.12.77.87z"/></svg>
+                <span class="cta-tg-dropdown" aria-label="咨询 @zfxt5"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="blog.html" class="px-3 py-2 rounded-xl text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-all">博客</a>
+        <a href="#contact" class="px-3 py-2 rounded-xl text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-all">联系</a>
+      </div>
+
+      <!-- CTA + Mobile -->
+      <div class="flex items-center gap-3 flex-shrink-0">
+        <a href="https://t.me/zfxt5" target="_blank" rel="noopener" class="bg-primary hover:bg-primary-dark text-deep-navy font-heading font-bold text-sm px-5 py-2.5 rounded-full transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-primary/30 flex items-center gap-1.5">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.53 8.15l-1.83 8.66c-.14.62-.5.77-.99.48l-2.76-2.04-1.33 1.28c-.15.15-.27.27-.56.27l.2-2.8 5.1-4.6c.22-.2-.05-.3-.34-.12l-6.31 3.97-2.72-.85c-.59-.19-.6-.59.12-.88l10.63-4.1c.5-.18.93.12.77.87z"/></svg>
+          <span class="cta-consult" aria-label="立即咨询"></span>
+        </a>
+        <button id="mobile-toggle" class="lg:hidden p-2 rounded-lg hover:bg-white/10 transition-colors" aria-label="Toggle menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden mt-2 glass-card rounded-2xl p-4 space-y-1 max-h-[80vh] overflow-y-auto">
+      <a href="index.html" class="block px-4 py-3 rounded-xl text-sm font-medium text-white/80 hover:text-white hover:bg-white/10">首页</a>
+      <a href="#about" class="block px-4 py-3 rounded-xl text-sm font-medium text-white/80 hover:text-white hover:bg-white/10">关于</a>
+      <!-- Mobile submenu toggle -->
+      <button id="mobile-payments-toggle" class="w-full flex items-center justify-between px-4 py-3 rounded-xl text-sm font-medium text-white/80 hover:text-white hover:bg-white/10">
+        支付通道
+        <svg id="mobile-payments-arrow" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+      </button>
+      <div id="mobile-payments-sub" class="hidden pl-4 space-y-0.5">
+        <div class="px-3 py-1.5 text-xs font-bold text-primary uppercase tracking-wider">南亚</div>
+        <a href="payments/india.html" class="block px-4 py-2 rounded-lg text-sm text-white/60 hover:text-primary">🇮🇳 印度支付</a>
+        <a href="payments/pakistan.html" class="block px-4 py-2 rounded-lg text-sm text-white/60 hover:text-primary">🇵🇰 巴基斯坦支付</a>
+        <a href="payments/bangladesh.html" class="block px-4 py-2 rounded-lg text-sm text-white/60 hover:text-primary">🇧🇩 孟加拉支付</a>
+        <div class="px-3 py-1.5 text-xs font-bold text-electric-blue uppercase tracking-wider mt-2">东南亚</div>
+        <a href="payments/indonesia.html" class="block px-4 py-2 rounded-lg text-sm text-white/60 hover:text-primary">🇮🇩 印尼支付</a>
+        <a href="payments/vietnam.html" class="block px-4 py-2 rounded-lg text-sm text-white/60 hover:text-primary">🇻🇳 越南支付</a>
+        <a href="payments/philippines.html" class="block px-4 py-2 rounded-lg text-sm text-white/60 hover:text-primary">🇵🇭 菲律宾支付</a>
+        <a href="payments/thailand.html" class="block px-4 py-2 rounded-lg text-sm text-white/60 hover:text-primary">🇹🇭 泰国支付</a>
+        <div class="px-3 py-1.5 text-xs font-bold text-sunset-orange uppercase tracking-wider mt-2">拉美</div>
+        <a href="payments/brazil.html" class="block px-4 py-2 rounded-lg text-sm text-white/60 hover:text-primary">🇧🇷 巴西支付</a>
+        <a href="payments/mexico.html" class="block px-4 py-2 rounded-lg text-sm text-white/60 hover:text-primary">🇲🇽 墨西哥支付</a>
+        <div class="px-3 py-1.5 text-xs font-bold text-coral-pink uppercase tracking-wider mt-2">中东</div>
+        <a href="payments/turkey.html" class="block px-4 py-2 rounded-lg text-sm text-white/60 hover:text-primary">🇹🇷 土耳其支付</a>
+        <a href="payments/iran.html" class="block px-4 py-2 rounded-lg text-sm text-white/60 hover:text-primary">🇮🇷 伊朗支付</a>
+        <a href="payments/egypt.html" class="block px-4 py-2 rounded-lg text-sm text-white/60 hover:text-primary">🇪🇬 埃及支付</a>
+        <div class="px-3 py-1.5 text-xs font-bold text-tropical-teal uppercase tracking-wider mt-2">非洲</div>
+        <a href="payments/nigeria.html" class="block px-4 py-2 rounded-lg text-sm text-white/60 hover:text-primary">🇳🇬 尼日利亚支付</a>
+        <a href="payments/south-africa.html" class="block px-4 py-2 rounded-lg text-sm text-white/60 hover:text-primary">🇿🇦 南非支付</a>
+        <a href="payments/kenya.html" class="block px-4 py-2 rounded-lg text-sm text-white/60 hover:text-primary">🇰🇪 肯尼亚支付</a>
+        <a href="payments/ethiopia.html" class="block px-4 py-2 rounded-lg text-sm text-white/60 hover:text-primary">🇪🇹 埃塞俄比亚支付</a>
+        <a href="payments/congo.html" class="block px-4 py-2 rounded-lg text-sm text-white/60 hover:text-primary">🇨🇩 刚果支付</a>
+      </div>
+      <a href="blog.html" class="block px-4 py-3 rounded-xl text-sm font-medium text-white/80 hover:text-white hover:bg-white/10">博客</a>
+      <a href="#contact" class="block px-4 py-3 rounded-xl text-sm font-medium text-white/80 hover:text-white hover:bg-white/10">联系</a>
+    </div>
+  </nav>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section id="hero" class="relative min-h-screen flex items-center justify-center hero-gradient overflow-hidden">
+    <div class="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl animate-float"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-electric-blue/10 rounded-full blur-3xl animate-float-delayed"></div>
+    <div class="absolute top-1/3 right-1/4 w-48 h-48 bg-tropical-teal/5 rounded-full blur-2xl animate-float"></div>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 text-center pt-24 pb-20">
+      <div class="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-5 py-2 mb-8 animate-fade-in">
+        <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+        <span class="text-sm font-medium text-white/70 tracking-wide uppercase">全球支付通道 · 三方支付 · 游戏通道对接</span>
+      </div>
+
+      <h1 class="font-heading font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight mb-6 animate-slide-up">
+        <span class="block text-white">全球跨境</span>
+        <span class="gradient-text">支付解决方案</span>
+      </h1>
+
+      <p class="max-w-2xl mx-auto text-lg sm:text-xl text-white/60 leading-relaxed mb-10" style="animation:slideUp .8s ease-out .2s forwards;opacity:0">
+        覆盖印度、东南亚、拉美、非洲、中东17国支付通道。专业三方支付系统搭建，游戏通道快速对接，安全稳定的跨境支付服务。
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center" style="animation:slideUp .8s ease-out .4s forwards;opacity:0">
+        <a href="https://t.me/zfxt5" target="_blank" rel="noopener" class="cta-glow bg-primary hover:bg-primary-dark text-deep-navy font-heading font-bold text-base px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 animate-pulse-glow shadow-lg shadow-primary/25 flex items-center gap-2">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.53 8.15l-1.83 8.66c-.14.62-.5.77-.99.48l-2.76-2.04-1.33 1.28c-.15.15-.27.27-.56.27l.2-2.8 5.1-4.6c.22-.2-.05-.3-.34-.12l-6.31 3.97-2.72-.85c-.59-.19-.6-.59.12-.88l10.63-4.1c.5-.18.93.12.77.87z"/></svg>
+          <span class="cta-tg-hero" aria-label="Telegram 咨询 @zfxt5"></span>
+        </a>
+        <a href="#about" class="group flex items-center gap-2 text-white/70 hover:text-white font-medium text-base px-6 py-4 rounded-full border border-white/10 hover:border-white/30 hover:bg-white/5 transition-all duration-300" aria-label="了解更多">
+          <span class="cta-readmore"></span>
+          <svg class="w-4 h-4 transition-transform group-hover:translate-y-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </a>
+      </div>
+
+      <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6" style="animation:slideUp .8s ease-out .6s forwards;opacity:0">
+        <div class="counter-box pt-6"><div class="font-heading font-extrabold text-3xl sm:text-4xl text-white">17<span class="text-primary">国</span></div><div class="text-sm text-white/50 mt-1">支付通道覆盖</div></div>
+        <div class="counter-box pt-6"><div class="font-heading font-extrabold text-3xl sm:text-4xl text-white">99.9<span class="text-primary">%</span></div><div class="text-sm text-white/50 mt-1">交易成功率</div></div>
+        <div class="counter-box pt-6"><div class="font-heading font-extrabold text-3xl sm:text-4xl text-white">24<span class="text-primary">/7</span></div><div class="text-sm text-white/50 mt-1">全天候支持</div></div>
+        <div class="counter-box pt-6"><div class="font-heading font-extrabold text-3xl sm:text-4xl text-white">50<span class="text-primary">+</span></div><div class="text-sm text-white/50 mt-1">支付方式</div></div>
+      </div>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none" class="w-full h-[60px] sm:h-[80px]"><path fill="#0F172A" d="M0,60 C240,120 480,0 720,60 C960,120 1200,0 1440,60 L1440,120 L0,120 Z"/></svg>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT SECTION ========== -->
+  <section id="about" class="relative bg-deep-navy py-20 sm:py-28 overflow-hidden">
+    <div class="absolute top-0 right-0 w-80 h-80 bg-primary/3 rounded-full blur-3xl"></div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="observe-section grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div>
+          <div class="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-1.5 mb-6">
+            <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            <span class="text-xs font-semibold text-primary uppercase tracking-wider">关于我们</span>
+          </div>
+          <h2 class="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white leading-tight mb-6">专注全球<br/><span class="gradient-text">跨境支付服务</span></h2>
+          <p class="text-white/60 text-base sm:text-lg leading-relaxed mb-8">我们是一支专注于新兴市场支付通道的专业团队，提供三方支付系统搭建、游戏通道对接、跨境代收代付等一站式服务。覆盖印度、东南亚、拉美、非洲、中东等17个国家和地区。</p>
+          <div class="space-y-4 mb-8">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+              <div><h4 class="font-heading font-bold text-white mb-1">三方支付通道</h4><p class="text-sm text-white/50">本地化支付通道直连，支持UPI、电子钱包、银行转账等多种方式</p></div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-electric-blue/10 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-5 h-5 text-electric-blue" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
+              <div><h4 class="font-heading font-bold text-white mb-1">游戏通道对接</h4><p class="text-sm text-white/50">游戏、娱乐行业专属支付通道，高成功率、快速结算</p></div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-tropical-teal/10 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-5 h-5 text-tropical-teal" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+              <div><h4 class="font-heading font-bold text-white mb-1">专属客服支持</h4><p class="text-sm text-white/50">Telegram @zfxt5 随时在线，一对一技术对接支持</p></div>
+            </div>
+          </div>
+          <a href="https://t.me/zfxt5" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-primary hover:text-primary-dark font-semibold transition-colors group">
+            <span class="cta-tg-about" aria-label="Telegram联系我们 @zfxt5"></span>
+            <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+        <div class="relative">
+          <div class="relative rounded-3xl overflow-hidden shadow-2xl shadow-primary/10">
+            <div class="aspect-[4/3] bg-gradient-to-br from-ocean-blue via-electric-blue to-tropical-teal relative">
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center">
+                  <div class="w-32 h-32 mx-auto mb-6 relative">
+                    <div class="absolute inset-0 bg-white/10 rounded-3xl rotate-6 animate-float"></div>
+                    <div class="absolute inset-0 bg-white/20 rounded-3xl -rotate-3 animate-float-delayed"></div>
+                    <div class="relative bg-white/30 rounded-3xl w-full h-full flex items-center justify-center backdrop-blur-sm">
+                      <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                    </div>
+                  </div>
+                  <div class="font-heading font-bold text-2xl text-white mb-2">覆盖17国</div>
+                  <div class="text-white/60 text-sm">全球支付通道网络</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 glass-card rounded-2xl p-4 animate-float">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center">
+                <svg class="w-6 h-6 text-primary" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.53 8.15l-1.83 8.66c-.14.62-.5.77-.99.48l-2.76-2.04-1.33 1.28c-.15.15-.27.27-.56.27l.2-2.8 5.1-4.6c.22-.2-.05-.3-.34-.12l-6.31 3.97-2.72-.85c-.59-.19-.6-.59.12-.88l10.63-4.1c.5-.18.93.12.77.87z"/></svg>
+              </div>
+              <div>
+                <div class="font-heading font-bold text-lg text-white">@zfxt5</div>
+                <div class="text-xs text-white/50">Telegram咨询</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CORE VALUES ========== -->
+  <section id="values" class="relative bg-deep-navy py-20 sm:py-28">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="observe-section text-center mb-16">
+        <div class="inline-flex items-center gap-2 bg-sunset-orange/10 rounded-full px-4 py-1.5 mb-6"><svg class="w-4 h-4 text-sunset-orange" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><span class="text-xs font-semibold text-sunset-orange uppercase tracking-wider">核心价值</span></div>
+        <h2 class="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white mb-4">我们的<span class="gradient-text">核心优势</span></h2>
+        <p class="max-w-2xl mx-auto text-white/50 text-base sm:text-lg">三方支付通道 · 游戏通道对接 · 跨境代收代付</p>
+      </div>
+      <div class="observe-section grid md:grid-cols-3 gap-6 lg:gap-8">
+        <div class="hover-lift glass-card rounded-3xl p-8 relative group"><div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-tropical-teal rounded-t-3xl opacity-0 group-hover:opacity-100 transition-opacity"></div><div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6"><svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg></div><div class="font-heading font-bold text-4xl text-white/10 mb-2">01</div><h3 class="font-heading font-bold text-xl text-white mb-3">全球支付通道</h3><p class="text-white/50 text-sm leading-relaxed">覆盖印度、印尼、越南、泰国、巴西等17国本地支付方式，UPI、电子钱包、银行转账全渠道接入。</p></div>
+        <div class="hover-lift glass-card rounded-3xl p-8 relative group"><div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-electric-blue to-ocean-blue rounded-t-3xl opacity-0 group-hover:opacity-100 transition-opacity"></div><div class="w-14 h-14 bg-electric-blue/10 rounded-2xl flex items-center justify-center mb-6"><svg class="w-7 h-7 text-electric-blue" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg></div><div class="font-heading font-bold text-4xl text-white/10 mb-2">02</div><h3 class="font-heading font-bold text-xl text-white mb-3">游戏通道对接</h3><p class="text-white/50 text-sm leading-relaxed">游戏、直播、娱乐行业专属通道，高成功率代收代付，T+0快速结算，支持大额交易。</p></div>
+        <div class="hover-lift glass-card rounded-3xl p-8 relative group"><div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-tropical-teal to-primary rounded-t-3xl opacity-0 group-hover:opacity-100 transition-opacity"></div><div class="w-14 h-14 bg-tropical-teal/10 rounded-2xl flex items-center justify-center mb-6"><svg class="w-7 h-7 text-tropical-teal" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div><div class="font-heading font-bold text-4xl text-white/10 mb-2">03</div><h3 class="font-heading font-bold text-xl text-white mb-3">安全合规</h3><p class="text-white/50 text-sm leading-relaxed">银行级加密传输，多重风控体系，严格遵守各国支付监管要求，全方位保障交易安全。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA BANNER ========== -->
+  <section class="relative py-24 sm:py-32 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-ocean-blue via-deep-sea to-ocean-blue"></div>
+    <div class="absolute inset-0 opacity-20"><div class="absolute inset-0" style="background-image:url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%232ECC71&quot; fill-opacity=&quot;0.08&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"></div></div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <div class="observe-section">
+        <h2 class="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white mb-6">立即对接<br/><span class="gradient-text">全球支付通道</span></h2>
+        <p class="text-white/50 text-base sm:text-lg mb-10 max-w-xl mx-auto">无论您需要印度支付、东南亚支付还是其他新兴市场通道，我们都能快速为您对接。</p>
+        <a href="https://t.me/zfxt5" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-deep-navy font-heading font-bold text-base px-10 py-4 rounded-full transition-all duration-300 hover:scale-105 shadow-lg shadow-primary/25 animate-pulse-glow">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.53 8.15l-1.83 8.66c-.14.62-.5.77-.99.48l-2.76-2.04-1.33 1.28c-.15.15-.27.27-.56.27l.2-2.8 5.1-4.6c.22-.2-.05-.3-.34-.12l-6.31 3.97-2.72-.85c-.59-.19-.6-.59.12-.88l10.63-4.1c.5-.18.93.12.77.87z"/></svg>
+          <span class="cta-tg-cta" aria-label="Telegram @zfxt5 立即咨询"></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== WHY CHOOSE US ========== -->
+  <section id="why" class="relative bg-deep-navy py-20 sm:py-28 overflow-hidden">
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-electric-blue/5 rounded-full blur-3xl"></div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="observe-section text-center mb-16">
+        <div class="inline-flex items-center gap-2 bg-electric-blue/10 rounded-full px-4 py-1.5 mb-6"><svg class="w-4 h-4 text-electric-blue" fill="currentColor" viewBox="0 0 24 24"><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg><span class="text-xs font-semibold text-electric-blue uppercase tracking-wider">为什么选择我们</span></div>
+        <h2 class="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white mb-4">我们独特的<span class="gradient-text">价值主张</span></h2>
+        <p class="max-w-2xl mx-auto text-white/50 text-base sm:text-lg">六大核心优势，助力您的全球支付业务</p>
+      </div>
+      <div class="observe-section grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="hover-lift glass-card rounded-3xl p-8 relative overflow-hidden group"><div class="absolute -top-10 -right-10 w-32 h-32 bg-primary/5 rounded-full group-hover:bg-primary/10 transition-colors"></div><div class="relative z-10"><div class="w-12 h-12 bg-gradient-to-br from-primary to-tropical-teal rounded-2xl flex items-center justify-center mb-5 shadow-lg shadow-primary/20"><svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div><h3 class="font-heading font-bold text-lg text-white mb-2">快速接入</h3><p class="text-white/50 text-sm leading-relaxed">标准API接口，最快30分钟完成支付通道对接，支持多种开发语言SDK。</p></div></div>
+        <div class="hover-lift glass-card rounded-3xl p-8 relative overflow-hidden group"><div class="absolute -top-10 -right-10 w-32 h-32 bg-electric-blue/5 rounded-full group-hover:bg-electric-blue/10 transition-colors"></div><div class="relative z-10"><div class="w-12 h-12 bg-gradient-to-br from-electric-blue to-ocean-blue rounded-2xl flex items-center justify-center mb-5 shadow-lg shadow-electric-blue/20"><svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg></div><h3 class="font-heading font-bold text-lg text-white mb-2">多样化通道</h3><p class="text-white/50 text-sm leading-relaxed">覆盖UPI、电子钱包、银行转账、信用卡等50+种本地支付方式，满足不同业务需求。</p></div></div>
+        <div class="hover-lift glass-card rounded-3xl p-8 relative overflow-hidden group"><div class="absolute -top-10 -right-10 w-32 h-32 bg-tropical-teal/5 rounded-full group-hover:bg-tropical-teal/10 transition-colors"></div><div class="relative z-10"><div class="w-12 h-12 bg-gradient-to-br from-tropical-teal to-primary rounded-2xl flex items-center justify-center mb-5 shadow-lg shadow-tropical-teal/20"><svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg></div><h3 class="font-heading font-bold text-lg text-white mb-2">专属客服</h3><p class="text-white/50 text-sm leading-relaxed">Telegram @zfxt5 全天候在线，一对一技术对接，快速响应解决问题。</p></div></div>
+        <div class="hover-lift glass-card rounded-3xl p-8 relative overflow-hidden group"><div class="absolute -top-10 -right-10 w-32 h-32 bg-coral-pink/5 rounded-full group-hover:bg-coral-pink/10 transition-colors"></div><div class="relative z-10"><div class="w-12 h-12 bg-gradient-to-br from-coral-pink to-sunset-orange rounded-2xl flex items-center justify-center mb-5 shadow-lg shadow-coral-pink/20"><svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg></div><h3 class="font-heading font-bold text-lg text-white mb-2">资金安全</h3><p class="text-white/50 text-sm leading-relaxed">银行级加密传输，多重风控防护，资金独立托管，确保每笔交易安全可靠。</p></div></div>
+        <div class="hover-lift glass-card rounded-3xl p-8 relative overflow-hidden group"><div class="absolute -top-10 -right-10 w-32 h-32 bg-sunset-orange/5 rounded-full group-hover:bg-sunset-orange/10 transition-colors"></div><div class="relative z-10"><div class="w-12 h-12 bg-gradient-to-br from-sunset-orange to-coral-pink rounded-2xl flex items-center justify-center mb-5 shadow-lg shadow-sunset-orange/20"><svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg></div><h3 class="font-heading font-bold text-lg text-white mb-2">高成功率</h3><p class="text-white/50 text-sm leading-relaxed">智能路由分配，多通道自动切换，交易成功率高达99.9%，行业领先水平。</p></div></div>
+        <div class="hover-lift glass-card rounded-3xl p-8 relative overflow-hidden group"><div class="absolute -top-10 -right-10 w-32 h-32 bg-primary/5 rounded-full group-hover:bg-primary/10 transition-colors"></div><div class="relative z-10"><div class="w-12 h-12 bg-gradient-to-br from-ocean-blue to-electric-blue rounded-2xl flex items-center justify-center mb-5 shadow-lg shadow-ocean-blue/20"><svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><h3 class="font-heading font-bold text-lg text-white mb-2">灵活结算</h3><p class="text-white/50 text-sm leading-relaxed">支持T+0实时结算，多币种结算，费率透明合理，灵活满足各类业务场景。</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section id="blog" class="relative bg-deep-sea py-20 sm:py-28 overflow-hidden">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/3 rounded-full blur-3xl"></div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="observe-section text-center mb-16">
+        <div class="inline-flex items-center gap-2 bg-coral-pink/10 rounded-full px-4 py-1.5 mb-6"><svg class="w-4 h-4 text-coral-pink" fill="currentColor" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg><span class="text-xs font-semibold text-coral-pink uppercase tracking-wider">客户反馈</span></div>
+        <h2 class="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white mb-4">客户<span class="gradient-text">怎么说</span></h2>
+        <p class="max-w-2xl mx-auto text-white/50 text-base sm:text-lg">真实的客户评价，见证我们的专业服务</p>
+      </div>
+      <div class="observe-section grid md:grid-cols-3 gap-6 lg:gap-8">
+        <div class="hover-lift glass-card rounded-3xl p-8 relative"><div class="absolute top-6 right-8"><svg class="w-10 h-10 text-primary/20" fill="currentColor" viewBox="0 0 24 24"><path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/></svg></div><div class="flex items-center gap-1 mb-4"><svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></div><p class="text-white/60 text-sm leading-relaxed mb-6">"通过Telegram @zfxt5联系后，半天内就完成了印度UPI通道的对接。交易成功率很高，结算也非常及时，是值得信赖的支付合作伙伴。"</p><div class="flex items-center gap-3 pt-4 border-t border-white/5"><div class="w-10 h-10 bg-gradient-to-br from-primary to-tropical-teal rounded-full flex items-center justify-center font-heading font-bold text-deep-navy text-sm">李</div><div><div class="font-heading font-semibold text-white text-sm">李伟</div><div class="text-xs text-white/40">跨境电商企业主</div></div></div></div>
+        <div class="hover-lift glass-card rounded-3xl p-8 relative"><div class="absolute top-6 right-8"><svg class="w-10 h-10 text-electric-blue/20" fill="currentColor" viewBox="0 0 24 24"><path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/></svg></div><div class="flex items-center gap-1 mb-4"><svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></div><p class="text-white/60 text-sm leading-relaxed mb-6">"我们的游戏平台需要对接多国支付通道，@zfxt5团队提供了一站式解决方案，印度、印尼、越南通道全部搞定，非常专业。"</p><div class="flex items-center gap-3 pt-4 border-t border-white/5"><div class="w-10 h-10 bg-gradient-to-br from-electric-blue to-ocean-blue rounded-full flex items-center justify-center font-heading font-bold text-white text-sm">王</div><div><div class="font-heading font-semibold text-white text-sm">王芳</div><div class="text-xs text-white/40">游戏出海运营总监</div></div></div></div>
+        <div class="hover-lift glass-card rounded-3xl p-8 relative"><div class="absolute top-6 right-8"><svg class="w-10 h-10 text-tropical-teal/20" fill="currentColor" viewBox="0 0 24 24"><path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/></svg></div><div class="flex items-center gap-1 mb-4"><svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></div><p class="text-white/60 text-sm leading-relaxed mb-6">"作为金融科技公司，我们对安全要求极高。他们的三方支付系统搭建方案和风控体系非常完善，合作以来零安全事故。"</p><div class="flex items-center gap-3 pt-4 border-t border-white/5"><div class="w-10 h-10 bg-gradient-to-br from-tropical-teal to-primary rounded-full flex items-center justify-center font-heading font-bold text-deep-navy text-sm">陈</div><div><div class="font-heading font-semibold text-white text-sm">陈莉</div><div class="text-xs text-white/40">金融科技CTO</div></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FINAL CTA ========== -->
+  <section id="contact" class="relative py-24 sm:py-32 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-deep-navy via-ocean-blue to-deep-sea"></div>
+    <div class="absolute inset-0"><div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl"></div></div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <div class="observe-section">
+        <div class="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-1.5 mb-6">
+          <svg class="w-4 h-4 text-primary" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.53 8.15l-1.83 8.66c-.14.62-.5.77-.99.48l-2.76-2.04-1.33 1.28c-.15.15-.27.27-.56.27l.2-2.8 5.1-4.6c.22-.2-.05-.3-.34-.12l-6.31 3.97-2.72-.85c-.59-.19-.6-.59.12-.88l10.63-4.1c.5-.18.93.12.77.87z"/></svg>
+          <span class="text-xs font-semibold text-primary uppercase tracking-wider">开始合作</span>
+        </div>
+        <h2 class="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white mb-6">立即联系我们<br/>开启<span class="gradient-text">全球支付</span></h2>
+        <p class="text-white/50 text-base sm:text-lg mb-10 max-w-xl mx-auto">通过Telegram联系我们，获取专属支付通道方案。三方支付、游戏通道、跨境代收代付，一站式解决。</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a href="https://t.me/zfxt5" target="_blank" rel="noopener" class="inline-flex items-center gap-3 bg-primary hover:bg-primary-dark text-deep-navy font-heading font-bold text-lg px-10 py-5 rounded-full transition-all duration-300 hover:scale-105 shadow-lg shadow-primary/25 animate-pulse-glow">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.53 8.15l-1.83 8.66c-.14.62-.5.77-.99.48l-2.76-2.04-1.33 1.28c-.15.15-.27.27-.56.27l.2-2.8 5.1-4.6c.22-.2-.05-.3-.34-.12l-6.31 3.97-2.72-.85c-.59-.19-.6-.59.12-.88l10.63-4.1c.5-.18.93.12.77.87z"/></svg>
+            Telegram: @zfxt5
+          </a>
+        </div>
+        <p class="mt-6 text-sm text-white/30">Telegram搜索 @zfxt5 即可联系，7x24小时在线</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="bg-deep-sea border-t border-white/5">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+      <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-8 mb-10">
+        <div class="lg:col-span-1">
+          <a href="index.html" class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center"><svg class="w-6 h-6 text-deep-navy" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div>
+            <span class="font-heading font-bold text-lg text-white">印度支付</span>
+          </a>
+          <p class="text-white/40 text-sm leading-relaxed mb-3">全球支付通道服务商<br/>三方支付 · 游戏通道 · 跨境代收付</p>
+          <a href="https://t.me/zfxt5" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-primary text-sm font-semibold hover:text-primary-dark transition-colors">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.53 8.15l-1.83 8.66c-.14.62-.5.77-.99.48l-2.76-2.04-1.33 1.28c-.15.15-.27.27-.56.27l.2-2.8 5.1-4.6c.22-.2-.05-.3-.34-.12l-6.31 3.97-2.72-.85c-.59-.19-.6-.59.12-.88l10.63-4.1c.5-.18.93.12.77.87z"/></svg>
+            @zfxt5
+          </a>
+        </div>
+        <div>
+          <h4 class="font-heading font-bold text-white text-sm mb-4">南亚 · 东南亚</h4>
+          <ul class="space-y-2">
+            <li><a href="payments/india.html" class="text-sm text-white/40 hover:text-primary transition-colors">印度支付</a></li>
+            <li><a href="payments/pakistan.html" class="text-sm text-white/40 hover:text-primary transition-colors">巴基斯坦支付</a></li>
+            <li><a href="payments/bangladesh.html" class="text-sm text-white/40 hover:text-primary transition-colors">孟加拉支付</a></li>
+            <li><a href="payments/indonesia.html" class="text-sm text-white/40 hover:text-primary transition-colors">印尼支付</a></li>
+            <li><a href="payments/vietnam.html" class="text-sm text-white/40 hover:text-primary transition-colors">越南支付</a></li>
+            <li><a href="payments/philippines.html" class="text-sm text-white/40 hover:text-primary transition-colors">菲律宾支付</a></li>
+            <li><a href="payments/thailand.html" class="text-sm text-white/40 hover:text-primary transition-colors">泰国支付</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-heading font-bold text-white text-sm mb-4">拉美 · 中东</h4>
+          <ul class="space-y-2">
+            <li><a href="payments/brazil.html" class="text-sm text-white/40 hover:text-primary transition-colors">巴西支付</a></li>
+            <li><a href="payments/mexico.html" class="text-sm text-white/40 hover:text-primary transition-colors">墨西哥支付</a></li>
+            <li><a href="payments/turkey.html" class="text-sm text-white/40 hover:text-primary transition-colors">土耳其支付</a></li>
+            <li><a href="payments/iran.html" class="text-sm text-white/40 hover:text-primary transition-colors">伊朗支付</a></li>
+            <li><a href="payments/egypt.html" class="text-sm text-white/40 hover:text-primary transition-colors">埃及支付</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-heading font-bold text-white text-sm mb-4">非洲</h4>
+          <ul class="space-y-2">
+            <li><a href="payments/nigeria.html" class="text-sm text-white/40 hover:text-primary transition-colors">尼日利亚支付</a></li>
+            <li><a href="payments/south-africa.html" class="text-sm text-white/40 hover:text-primary transition-colors">南非支付</a></li>
+            <li><a href="payments/kenya.html" class="text-sm text-white/40 hover:text-primary transition-colors">肯尼亚支付</a></li>
+            <li><a href="payments/ethiopia.html" class="text-sm text-white/40 hover:text-primary transition-colors">埃塞俄比亚支付</a></li>
+            <li><a href="payments/congo.html" class="text-sm text-white/40 hover:text-primary transition-colors">刚果支付</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-heading font-bold text-white text-sm mb-4">快速链接</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-sm text-white/40 hover:text-primary transition-colors">首页</a></li>
+            <li><a href="#about" class="text-sm text-white/40 hover:text-primary transition-colors">关于我们</a></li>
+            <li><a href="blog.html" class="text-sm text-white/40 hover:text-primary transition-colors">博客资讯</a></li>
+          </ul>
+          <h4 class="font-heading font-bold text-white text-sm mb-3 mt-5">联系方式</h4>
+          <a href="https://t.me/zfxt5" target="_blank" rel="noopener" class="flex items-center gap-2 text-sm text-primary hover:text-primary-dark transition-colors">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.53 8.15l-1.83 8.66c-.14.62-.5.77-.99.48l-2.76-2.04-1.33 1.28c-.15.15-.27.27-.56.27l.2-2.8 5.1-4.6c.22-.2-.05-.3-.34-.12l-6.31 3.97-2.72-.85c-.59-.19-.6-.59.12-.88l10.63-4.1c.5-.18.93.12.77.87z"/></svg>
+            Telegram: @zfxt5
+          </a>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="text-xs text-white/30">版权 &copy; 2026 印度支付-最全支付资讯-专业一站式支付服务. All rights reserved.</p>
+        <div class="flex items-center gap-4">
+          <a href="#" class="text-xs text-white/30 hover:text-primary transition-colors">隐私政策</a>
+          <a href="#" class="text-xs text-white/30 hover:text-primary transition-colors">服务条款</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Telegram Button -->
+  <a href="https://t.me/zfxt5" target="_blank" rel="noopener" class="tg-float fixed bottom-6 left-6 z-50 w-14 h-14 bg-primary hover:bg-primary-dark text-deep-navy rounded-full shadow-lg shadow-primary/30 flex items-center justify-center transition-all duration-300 hover:scale-110" aria-label="Contact on Telegram" title="Telegram: @zfxt5">
+    <svg class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.53 8.15l-1.83 8.66c-.14.62-.5.77-.99.48l-2.76-2.04-1.33 1.28c-.15.15-.27.27-.56.27l.2-2.8 5.1-4.6c.22-.2-.05-.3-.34-.12l-6.31 3.97-2.72-.85c-.59-.19-.6-.59.12-.88l10.63-4.1c.5-.18.93.12.77.87z"/></svg>
+  </a>
+
+  <!-- Back to top -->
+  <button id="back-to-top" class="fixed bottom-6 right-6 z-50 w-12 h-12 bg-white/10 hover:bg-white/20 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 opacity-0 translate-y-4 pointer-events-none" aria-label="Back to top">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg>
+  </button>
+
+  <script>
+    const navbar=document.getElementById('navbar'),firstChild=navbar.querySelector(':first-child');
+    window.addEventListener('scroll',()=>{firstChild.classList.toggle('navbar-scrolled',window.scrollY>50)});
+    document.getElementById('mobile-toggle').addEventListener('click',()=>document.getElementById('mobile-menu').classList.toggle('hidden'));
+    document.getElementById('mobile-payments-toggle').addEventListener('click',()=>{
+      document.getElementById('mobile-payments-sub').classList.toggle('hidden');
+      document.getElementById('mobile-payments-arrow').classList.toggle('rotate-180');
+    });
+    document.querySelectorAll('#mobile-menu a').forEach(l=>l.addEventListener('click',()=>document.getElementById('mobile-menu').classList.add('hidden')));
+    const backToTop=document.getElementById('back-to-top');
+    window.addEventListener('scroll',()=>{const s=window.scrollY>500;backToTop.classList.toggle('opacity-0',!s);backToTop.classList.toggle('translate-y-4',!s);backToTop.classList.toggle('pointer-events-none',!s);backToTop.classList.toggle('opacity-100',s);backToTop.classList.toggle('translate-y-0',s)});
+    backToTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+    const observer=new IntersectionObserver(e=>{e.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})},{rootMargin:'0px 0px -80px 0px',threshold:0.1});
+    document.querySelectorAll('.observe-section').forEach(el=>observer.observe(el));
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){e.preventDefault();const t=document.querySelector(this.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'})})});
+  </script>
+</body>
+</html>

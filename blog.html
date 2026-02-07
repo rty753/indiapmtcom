@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>博客资讯 - 印度支付 - 最全支付资讯</title>
+  <meta name="description" content="印度支付博客资讯，提供最新的支付行业动态、市场趋势分析和专业支付解决方案。" />
+  <link rel="canonical" href="https://indiapmt.com/blog.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="印度支付 - 专业一站式支付服务" />
+  <meta property="og:title" content="博客资讯 - 印度支付 - 最全支付资讯" />
+  <meta property="og:description" content="印度支付博客资讯，提供最新的支付行业动态、市场趋势分析和专业支付解决方案。" />
+  <meta property="og:url" content="https://indiapmt.com/blog.html" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="博客资讯 - 印度支付 - 最全支付资讯" />
+  <meta name="twitter:description" content="印度支付博客资讯，提供最新的支付行业动态、市场趋势分析和专业支付解决方案。" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2ECC71',
+            'primary-dark': '#27AE60',
+            'deep-sea': '#0A1628',
+            'deep-navy': '#0F172A',
+            'ocean-blue': '#1E3A8A',
+            'electric-blue': '#3B82F6',
+            'tropical-teal': '#2DD4BF',
+            'sunset-orange': '#FB923C',
+            'coral-pink': '#FDA4AF',
+            'ghost-white': '#F8FAFC',
+          },
+          fontFamily: {
+            heading: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            body: ['"Inter"', 'system-ui', 'sans-serif'],
+          },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'pulse-glow': 'pulseGlow 3s ease-in-out infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-20px)' },
+            },
+            pulseGlow: {
+              '0%, 100%': { boxShadow: '0 0 20px rgba(46, 204, 113, 0.3)' },
+              '50%': { boxShadow: '0 0 40px rgba(46, 204, 113, 0.6)' },
+            },
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #0A1628; }
+    ::-webkit-scrollbar-thumb { background: #2ECC71; border-radius: 4px; }
+    .gradient-text {
+      background: linear-gradient(135deg, #2ECC71, #2DD4BF, #3B82F6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .hover-lift {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .hover-lift:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 60px rgba(46, 204, 113, 0.15);
+    }
+    .navbar-scrolled {
+      background: rgba(10, 22, 40, 0.95) !important;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    }
+    .observe-section {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .observe-section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .blog-card-img {
+      position: relative;
+      overflow: hidden;
+    }
+    .blog-card-img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 40%, rgba(10, 22, 40, 0.8) 100%);
+    }
+    .bubble-container {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+    .bubble {
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, rgba(46, 204, 113, 0.3), rgba(46, 204, 113, 0.05));
+      animation: bubble linear infinite;
+    }
+    .tg-float{animation:tgPulse 2s ease-in-out infinite}
+    @keyframes tgPulse{0%,100%{box-shadow:0 0 0 0 rgba(46,204,113,0.4)}50%{box-shadow:0 0 0 12px rgba(46,204,113,0)}}
+    @keyframes bubble {
+      0% { transform: translateY(100vh) scale(0); opacity: 0; }
+      50% { opacity: 0.6; }
+      100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+    }
+    .cta-consult::after{content:'立即咨询'}
+    .cta-readpost::after{content:'Read Post'}
+  </style>
+</head>
+<body class="bg-deep-sea text-white font-body antialiased">
+
+  <!-- Bubbles -->
+  <div class="bubble-container fixed inset-0 z-0">
+    <div class="bubble" style="width:10px;height:10px;left:15%;animation-duration:14s;animation-delay:0s;bottom:-20px;"></div>
+    <div class="bubble" style="width:8px;height:8px;left:40%;animation-duration:16s;animation-delay:3s;bottom:-20px;"></div>
+    <div class="bubble" style="width:12px;height:12px;left:70%;animation-duration:12s;animation-delay:1s;bottom:-20px;"></div>
+    <div class="bubble" style="width:6px;height:6px;left:85%;animation-duration:18s;animation-delay:5s;bottom:-20px;"></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-6xl">
+    <div class="glass-card rounded-full px-6 py-3 flex items-center justify-between transition-all duration-300">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center transition-transform group-hover:scale-110">
+          <svg class="w-6 h-6 text-deep-navy" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+        </div>
+        <span class="font-heading font-bold text-lg hidden sm:block">印度支付</span>
+      </a>
+      <div class="hidden md:flex items-center gap-1">
+        <a href="index.html" class="px-4 py-2 rounded-full text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-all">首页</a>
+        <a href="index.html#about" class="px-4 py-2 rounded-full text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-all">关于</a>
+        <a href="index.html#values" class="px-4 py-2 rounded-full text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-all">产品</a>
+        <a href="blog.html" class="px-4 py-2 rounded-full text-sm font-medium text-white bg-white/10 transition-all">博客</a>
+        <a href="index.html#contact" class="px-4 py-2 rounded-full text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-all">联系</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="https://t.me/zfxt5" target="_blank" rel="noopener" class="bg-primary hover:bg-primary-dark text-deep-navy font-heading font-bold text-sm px-5 py-2.5 rounded-full transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-primary/30 flex items-center gap-1.5"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.53 8.15l-1.83 8.66c-.14.62-.5.77-.99.48l-2.76-2.04-1.33 1.28c-.15.15-.27.27-.56.27l.2-2.8 5.1-4.6c.22-.2-.05-.3-.34-.12l-6.31 3.97-2.72-.85c-.59-.19-.6-.59.12-.88l10.63-4.1c.5-.18.93.12.77.87z"/></svg><span class="cta-consult" aria-label="立即咨询"></span></a>
+        <button id="mobile-toggle" class="md:hidden p-2 rounded-lg hover:bg-white/10 transition-colors" aria-label="Toggle menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden mt-2 glass-card rounded-2xl p-4 space-y-1">
+      <a href="index.html" class="block px-4 py-3 rounded-xl text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-all">首页</a>
+      <a href="index.html#about" class="block px-4 py-3 rounded-xl text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-all">关于</a>
+      <a href="index.html#values" class="block px-4 py-3 rounded-xl text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-all">产品</a>
+      <a href="blog.html" class="block px-4 py-3 rounded-xl text-sm font-medium text-white bg-white/10 transition-all">博客</a>
+      <a href="index.html#contact" class="block px-4 py-3 rounded-xl text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-all">联系</a>
+    </div>
+  </nav>
+
+  <!-- Hero Banner -->
+  <section class="relative pt-32 pb-20 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-ocean-blue/30 via-deep-sea to-deep-navy"></div>
+    <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%232ECC71&quot; fill-opacity=&quot;0.15&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 text-center">
+      <div class="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-5 py-2 mb-6">
+        <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/></svg>
+        <span class="text-sm font-medium text-primary/80 tracking-wide">最新资讯</span>
+      </div>
+      <h1 class="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl text-white mb-4">
+        博客<span class="gradient-text">资讯</span>
+      </h1>
+      <p class="max-w-xl mx-auto text-white/50 text-base sm:text-lg">深入了解支付行业动态、技术趋势与专业解决方案</p>
+    </div>
+    <!-- Wave -->
+    <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" class="w-full h-[50px]">
+        <path fill="#0F172A" d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,30 1440,40 L1440,80 L0,80 Z"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Blog Grid -->
+  <section class="relative bg-deep-navy py-16 sm:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+      <!-- Row 1: 3 cards -->
+      <div class="observe-section grid md:grid-cols-3 gap-6 lg:gap-8 mb-8">
+
+        <!-- Article 1 -->
+        <article class="hover-lift glass-card rounded-3xl overflow-hidden group">
+          <div class="blog-card-img h-48 bg-gradient-to-br from-ocean-blue to-electric-blue relative">
+            <div class="absolute inset-0 flex items-center justify-center z-10">
+              <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center backdrop-blur-sm">
+                <svg class="w-8 h-8 text-white/80" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"/></svg>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-xs font-medium text-primary bg-primary/10 px-2.5 py-1 rounded-full">移动支付</span>
+              <span class="text-xs text-white/30">15 7月, 2025</span>
+            </div>
+            <h3 class="font-heading font-bold text-lg text-white mb-3 group-hover:text-primary transition-colors leading-snug">
+              <a href="blog/bangladesh-digital-payment.html">孟加拉支付市场的数字化机遇：bKash与Nagad引领的移动支付革命</a>
+            </h3>
+            <p class="text-white/40 text-sm leading-relaxed mb-4 line-clamp-3">南亚地区的数字支付市场正在经历前所未有的变革，孟加拉国作为该区域最具活力的经济体之一，其移动支付生态系统的蓬勃发展令人瞩目。</p>
+            <a href="blog/bangladesh-digital-payment.html" class="inline-flex items-center gap-1.5 text-primary text-sm font-semibold hover:gap-3 transition-all">
+              <span class="cta-readpost" aria-label="Read Post"></span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="hover-lift glass-card rounded-3xl overflow-hidden group">
+          <div class="blog-card-img h-48 bg-gradient-to-br from-tropical-teal to-primary relative">
+            <div class="absolute inset-0 flex items-center justify-center z-10">
+              <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center backdrop-blur-sm">
+                <svg class="w-8 h-8 text-white/80" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 01.9 2.7m0 0a3 3 0 01-3 3m0 3h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008zm-3 6h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008z"/></svg>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-xs font-medium text-tropical-teal bg-tropical-teal/10 px-2.5 py-1 rounded-full">系统搭建</span>
+              <span class="text-xs text-white/30">26 5月, 2025</span>
+            </div>
+            <h3 class="font-heading font-bold text-lg text-white mb-3 group-hover:text-primary transition-colors leading-snug">
+              <a href="blog/third-party-payment-system.html">专业三方支付系统搭建与出租服务</a>
+            </h3>
+            <p class="text-white/40 text-sm leading-relaxed mb-4 line-clamp-3">在当今数字经济时代，拥有一套可靠的三方支付系统对于企业的支付业务运营至关重要。专业的系统搭建不仅能提升交易效率，更能确保资金安全。</p>
+            <a href="blog/third-party-payment-system.html" class="inline-flex items-center gap-1.5 text-primary text-sm font-semibold hover:gap-3 transition-all">
+              <span class="cta-readpost" aria-label="Read Post"></span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Article 3 -->
+        <article class="hover-lift glass-card rounded-3xl overflow-hidden group">
+          <div class="blog-card-img h-48 bg-gradient-to-br from-electric-blue to-ocean-blue relative">
+            <div class="absolute inset-0 flex items-center justify-center z-10">
+              <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center backdrop-blur-sm">
+                <svg class="w-8 h-8 text-white/80" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z"/></svg>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-xs font-medium text-electric-blue bg-electric-blue/10 px-2.5 py-1 rounded-full">支付基础</span>
+              <span class="text-xs text-white/30">13 5月, 2025</span>
+            </div>
+            <h3 class="font-heading font-bold text-lg text-white mb-3 group-hover:text-primary transition-colors leading-snug">
+              <a href="blog/payment-system.html">支付系统</a>
+            </h3>
+            <p class="text-white/40 text-sm leading-relaxed mb-4 line-clamp-3">什么是支付系统？支付系统是指用于执行交易、转移资金的基础设施和规则体系。深入了解现代支付系统的架构与运作原理。</p>
+            <a href="blog/payment-system.html" class="inline-flex items-center gap-1.5 text-primary text-sm font-semibold hover:gap-3 transition-all">
+              <span class="cta-readpost" aria-label="Read Post"></span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+        </article>
+      </div>
+
+      <!-- Row 2: 3 cards -->
+      <div class="observe-section grid md:grid-cols-3 gap-6 lg:gap-8 mb-8">
+
+        <!-- Article 4 -->
+        <article class="hover-lift glass-card rounded-3xl overflow-hidden group">
+          <div class="blog-card-img h-48 bg-gradient-to-br from-sunset-orange to-coral-pink relative">
+            <div class="absolute inset-0 flex items-center justify-center z-10">
+              <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center backdrop-blur-sm">
+                <svg class="w-8 h-8 text-white/80" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-xs font-medium text-sunset-orange bg-sunset-orange/10 px-2.5 py-1 rounded-full">解决方案</span>
+              <span class="text-xs text-white/30">8 5月, 2025</span>
+            </div>
+            <h3 class="font-heading font-bold text-lg text-white mb-3 group-hover:text-primary transition-colors leading-snug">
+              <a href="blog/online-gaming-payment.html">在线博彩平台支付解决方案总结</a>
+            </h3>
+            <p class="text-white/40 text-sm leading-relaxed mb-4 line-clamp-3">随着印度在线娱乐行业的快速发展，支付解决方案的选择变得尤为重要。本文总结了当前主流平台的支付接入方案与技术架构。</p>
+            <a href="blog/online-gaming-payment.html" class="inline-flex items-center gap-1.5 text-primary text-sm font-semibold hover:gap-3 transition-all">
+              <span class="cta-readpost" aria-label="Read Post"></span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Article 5 -->
+        <article class="hover-lift glass-card rounded-3xl overflow-hidden group">
+          <div class="blog-card-img h-48 bg-gradient-to-br from-primary to-ocean-blue relative">
+            <div class="absolute inset-0 flex items-center justify-center z-10">
+              <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center backdrop-blur-sm">
+                <svg class="w-8 h-8 text-white/80" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-xs font-medium text-primary bg-primary/10 px-2.5 py-1 rounded-full">行业概览</span>
+              <span class="text-xs text-white/30">4 5月, 2025</span>
+            </div>
+            <h3 class="font-heading font-bold text-lg text-white mb-3 group-hover:text-primary transition-colors leading-snug">
+              <a href="blog/india-payment.html">印度支付</a>
+            </h3>
+            <p class="text-white/40 text-sm leading-relaxed mb-4 line-clamp-3">印度支付系统的全景解析，深入了解UPI、Net Banking、电子钱包等多种支付方式的运作机制与市场份额。</p>
+            <a href="blog/india-payment.html" class="inline-flex items-center gap-1.5 text-primary text-sm font-semibold hover:gap-3 transition-all">
+              <span class="cta-readpost" aria-label="Read Post"></span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Article 6 -->
+        <article class="hover-lift glass-card rounded-3xl overflow-hidden group">
+          <div class="blog-card-img h-48 bg-gradient-to-br from-coral-pink to-sunset-orange relative">
+            <div class="absolute inset-0 flex items-center justify-center z-10">
+              <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center backdrop-blur-sm">
+                <svg class="w-8 h-8 text-white/80" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-xs font-medium text-coral-pink bg-coral-pink/10 px-2.5 py-1 rounded-full">安全指南</span>
+              <span class="text-xs text-white/30">21 4月, 2025</span>
+            </div>
+            <h3 class="font-heading font-bold text-lg text-white mb-3 group-hover:text-primary transition-colors leading-snug">
+              <a href="blog/payment-security-guide.html">企业支付安全指南：如何保护您的交易数据</a>
+            </h3>
+            <p class="text-white/40 text-sm leading-relaxed mb-4 line-clamp-3">随着数字支付的普及，支付安全成为企业和消费者最关心的问题。本文详细介绍企业如何构建多层次的支付安全防护体系。</p>
+            <a href="blog/payment-security-guide.html" class="inline-flex items-center gap-1.5 text-primary text-sm font-semibold hover:gap-3 transition-all">
+              <span class="cta-readpost" aria-label="Read Post"></span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+        </article>
+      </div>
+
+      <!-- Row 3: 2 cards centered -->
+      <div class="observe-section grid md:grid-cols-3 gap-6 lg:gap-8">
+
+        <!-- Article 7 -->
+        <article class="hover-lift glass-card rounded-3xl overflow-hidden group">
+          <div class="blog-card-img h-48 bg-gradient-to-br from-electric-blue to-tropical-teal relative">
+            <div class="absolute inset-0 flex items-center justify-center z-10">
+              <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center backdrop-blur-sm">
+                <svg class="w-8 h-8 text-white/80" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-xs font-medium text-electric-blue bg-electric-blue/10 px-2.5 py-1 rounded-full">企业效率</span>
+              <span class="text-xs text-white/30">21 4月, 2025</span>
+            </div>
+            <h3 class="font-heading font-bold text-lg text-white mb-3 group-hover:text-primary transition-colors leading-snug">
+              <a href="blog/fast-payment-processing.html">为什么快速支付处理对企业至关重要</a>
+            </h3>
+            <p class="text-white/40 text-sm leading-relaxed mb-4 line-clamp-3">在当今快节奏的商业环境中，支付处理速度已成为决定企业竞争力的关键因素。了解快速支付如何影响转化率和客户满意度。</p>
+            <a href="blog/fast-payment-processing.html" class="inline-flex items-center gap-1.5 text-primary text-sm font-semibold hover:gap-3 transition-all">
+              <span class="cta-readpost" aria-label="Read Post"></span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Article 8 -->
+        <article class="hover-lift glass-card rounded-3xl overflow-hidden group">
+          <div class="blog-card-img h-48 bg-gradient-to-br from-tropical-teal to-ocean-blue relative">
+            <div class="absolute inset-0 flex items-center justify-center z-10">
+              <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center backdrop-blur-sm">
+                <svg class="w-8 h-8 text-white/80" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"/></svg>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-xs font-medium text-tropical-teal bg-tropical-teal/10 px-2.5 py-1 rounded-full">趋势洞察</span>
+              <span class="text-xs text-white/30">21 4月, 2025</span>
+            </div>
+            <h3 class="font-heading font-bold text-lg text-white mb-3 group-hover:text-primary transition-colors leading-snug">
+              <a href="blog/digital-payment-trends-2025.html">2025年数字支付趋势：企业如何把握支付创新机遇</a>
+            </h3>
+            <p class="text-white/40 text-sm leading-relaxed mb-4 line-clamp-3">随着数字化转型的加速，支付行业正经历着前所未有的创新浪潮。了解2025年最值得关注的数字支付趋势。</p>
+            <a href="blog/digital-payment-trends-2025.html" class="inline-flex items-center gap-1.5 text-primary text-sm font-semibold hover:gap-3 transition-all">
+              <span class="cta-readpost" aria-label="Read Post"></span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Empty placeholder for grid alignment -->
+        <div class="hidden md:block"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-deep-sea border-t border-white/5">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+      <div class="grid md:grid-cols-4 gap-8 mb-10">
+        <div class="md:col-span-1">
+          <a href="index.html" class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-deep-navy" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+            </div>
+            <span class="font-heading font-bold text-lg text-white">印度支付</span>
+          </a>
+          <p class="text-white/40 text-sm leading-relaxed">最全支付资讯，专业一站式支付服务。</p>
+        </div>
+        <div>
+          <h4 class="font-heading font-bold text-white text-sm mb-4">快速链接</h4>
+          <ul class="space-y-2.5">
+            <li><a href="index.html" class="text-sm text-white/40 hover:text-primary transition-colors">首页</a></li>
+            <li><a href="index.html#about" class="text-sm text-white/40 hover:text-primary transition-colors">关于我们</a></li>
+            <li><a href="blog.html" class="text-sm text-white/40 hover:text-primary transition-colors">博客资讯</a></li>
+            <li><a href="index.html#contact" class="text-sm text-white/40 hover:text-primary transition-colors">联系我们</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-heading font-bold text-white text-sm mb-4">热门文章</h4>
+          <ul class="space-y-2.5">
+            <li><a href="blog/india-payment.html" class="text-sm text-white/40 hover:text-primary transition-colors">印度支付概览</a></li>
+            <li><a href="blog/payment-system.html" class="text-sm text-white/40 hover:text-primary transition-colors">支付系统详解</a></li>
+            <li><a href="blog/payment-security-guide.html" class="text-sm text-white/40 hover:text-primary transition-colors">支付安全指南</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-heading font-bold text-white text-sm mb-4">联系方式</h4>
+          <ul class="space-y-2.5">
+            <li>
+              <a href="https://t.me/zfxt5" target="_blank" rel="noopener" class="flex items-center gap-2 text-sm text-white/40 hover:text-primary transition-colors">
+                <svg class="w-4 h-4 text-primary/60" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.53 8.15l-1.83 8.66c-.14.62-.5.77-.99.48l-2.76-2.04-1.33 1.28c-.15.15-.27.27-.56.27l.2-2.8 5.1-4.6c.22-.2-.05-.3-.34-.12l-6.31 3.97-2.72-.85c-.59-.19-.6-.59.12-.88l10.63-4.1c.5-.18.93.12.77.87z"/></svg>
+                Telegram: @zfxt5
+              </a>
+            </li>
+            <li class="flex items-center gap-2 text-sm text-white/40">
+              <svg class="w-4 h-4 text-primary/60" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9"/></svg>
+              indiapmt.com
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="text-xs text-white/30">版权 &copy; 2026 印度支付-最全支付资讯-专业一站式支付服务. All rights reserved.</p>
+        <div class="flex items-center gap-4">
+          <a href="#" class="text-xs text-white/30 hover:text-primary transition-colors">隐私政策</a>
+          <a href="#" class="text-xs text-white/30 hover:text-primary transition-colors">服务条款</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Telegram -->
+  <a href="https://t.me/zfxt5" target="_blank" rel="noopener" class="tg-float fixed bottom-6 left-6 z-50 w-14 h-14 bg-primary hover:bg-primary-dark rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110" aria-label="Telegram @zfxt5">
+    <svg class="w-7 h-7 text-deep-navy" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.53 8.15l-1.83 8.66c-.14.62-.5.77-.99.48l-2.76-2.04-1.33 1.28c-.15.15-.27.27-.56.27l.2-2.8 5.1-4.6c.22-.2-.05-.3-.34-.12l-6.31 3.97-2.72-.85c-.59-.19-.6-.59.12-.88l10.63-4.1c.5-.18.93.12.77.87z"/></svg>
+  </a>
+
+  <!-- Back to top -->
+  <button id="back-to-top" class="fixed bottom-6 right-6 z-50 w-12 h-12 bg-primary hover:bg-primary-dark text-deep-navy rounded-full shadow-lg shadow-primary/30 flex items-center justify-center transition-all duration-300 opacity-0 translate-y-4 pointer-events-none" aria-label="Back to top">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg>
+  </button>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    const firstChild = navbar.querySelector(':first-child');
+    window.addEventListener('scroll', () => {
+      firstChild.classList.toggle('navbar-scrolled', window.scrollY > 50);
+    });
+    document.getElementById('mobile-toggle').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+    document.querySelectorAll('#mobile-menu a').forEach(l => l.addEventListener('click', () => document.getElementById('mobile-menu').classList.add('hidden')));
+    const backToTop = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      const show = window.scrollY > 500;
+      backToTop.classList.toggle('opacity-0', !show);
+      backToTop.classList.toggle('translate-y-4', !show);
+      backToTop.classList.toggle('pointer-events-none', !show);
+      backToTop.classList.toggle('opacity-100', show);
+      backToTop.classList.toggle('translate-y-0', show);
+    });
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -80px 0px', threshold: 0.1 });
+    document.querySelectorAll('.observe-section').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

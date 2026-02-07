@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://indiapmt.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://indiapmt.com/blog.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+
+  <!-- 支付通道 - 南亚 -->
+  <url><loc>https://indiapmt.com/payments/india.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://indiapmt.com/payments/pakistan.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://indiapmt.com/payments/bangladesh.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- 支付通道 - 东南亚 -->
+  <url><loc>https://indiapmt.com/payments/indonesia.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://indiapmt.com/payments/vietnam.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://indiapmt.com/payments/philippines.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://indiapmt.com/payments/thailand.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- 支付通道 - 拉美 -->
+  <url><loc>https://indiapmt.com/payments/brazil.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://indiapmt.com/payments/mexico.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- 支付通道 - 中东 -->
+  <url><loc>https://indiapmt.com/payments/turkey.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://indiapmt.com/payments/iran.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://indiapmt.com/payments/egypt.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- 支付通道 - 非洲 -->
+  <url><loc>https://indiapmt.com/payments/nigeria.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://indiapmt.com/payments/south-africa.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://indiapmt.com/payments/kenya.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://indiapmt.com/payments/ethiopia.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://indiapmt.com/payments/congo.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- 博客文章 -->
+  <url><loc>https://indiapmt.com/blog/bangladesh-digital-payment.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://indiapmt.com/blog/third-party-payment-system.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://indiapmt.com/blog/payment-system.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://indiapmt.com/blog/online-gaming-payment.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://indiapmt.com/blog/india-payment.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://indiapmt.com/blog/payment-security-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://indiapmt.com/blog/fast-payment-processing.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://indiapmt.com/blog/digital-payment-trends-2025.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+</urlset>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>企业支付安全指南：如何保护您的交易数据 - 印度支付博客</title>
+  <meta name="description" content="全面的企业支付安全指南，涵盖加密技术、PCI-DSS合规、欺诈检测、多因素认证、数据保护最佳实践和事件响应策略。" />
+  <link rel="canonical" href="https://indiapmt.com/blog/payment-security-guide.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="印度支付 - 专业一站式支付服务" />
+  <meta property="og:title" content="企业支付安全指南：如何保护您的交易数据 - 印度支付博客" />
+  <meta property="og:description" content="全面的企业支付安全指南，涵盖加密技术、PCI-DSS合规、欺诈检测、多因素认证、数据保护最佳实践和事件响应策略。" />
+  <meta property="og:url" content="https://indiapmt.com/blog/payment-security-guide.html" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="企业支付安全指南：如何保护您的交易数据 - 印度支付博客" />
+  <meta name="twitter:description" content="全面的企业支付安全指南，涵盖加密技术、PCI-DSS合规、欺诈检测、多因素认证、数据保护最佳实践和事件响应策略。" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2ECC71',
+            'primary-dark': '#27AE60',
+            'deep-sea': '#0A1628',
+            'deep-navy': '#0F172A',
+            'ocean-blue': '#1E3A8A',
+            'electric-blue': '#3B82F6',
+            'tropical-teal': '#2DD4BF',
+            'sunset-orange': '#FB923C',
+            'coral-pink': '#FDA4AF',
+          },
+          fontFamily: {
+            heading: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            body: ['"Inter"', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #0A1628; }
+    ::-webkit-scrollbar-thumb { background: #2ECC71; border-radius: 4px; }
+    .gradient-text {
+      background: linear-gradient(135deg, #2ECC71, #2DD4BF, #3B82F6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .navbar-scrolled {
+      background: rgba(10, 22, 40, 0.95) !important;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    }
+    .prose-custom h2 { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-weight: 700; font-size: 1.5rem; color: #fff; margin-top: 2rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .prose-custom h3 { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-weight: 600; font-size: 1.25rem; color: #e2e8f0; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+    .prose-custom p { color: rgba(255,255,255,0.6); line-height: 1.8; margin-bottom: 1rem; font-size: 0.95rem; }
+    .prose-custom ul, .prose-custom ol { color: rgba(255,255,255,0.6); margin-bottom: 1rem; padding-left: 1.5rem; }
+    .prose-custom li { margin-bottom: 0.5rem; line-height: 1.7; font-size: 0.95rem; }
+    .prose-custom strong { color: #fff; }
+    .prose-custom blockquote { border-left: 3px solid #2ECC71; padding-left: 1rem; margin: 1.5rem 0; color: rgba(255,255,255,0.5); font-style: italic; }
+    .cta-consult::after{content:'立即咨询'}
+    .cta-readpost::after{content:'Read Post'}
+  </style>
+</head>
+<body class="bg-deep-sea text-white font-body antialiased">
+
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-6xl">
+    <div class="glass-card rounded-full px-6 py-3 flex items-center justify-between transition-all duration-300">
+      <a href="../index.html" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center transition-transform group-hover:scale-110">
+          <svg class="w-6 h-6 text-deep-navy" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+        </div>
+        <span class="font-heading font-bold text-lg hidden sm:block">印度支付</span>
+      </a>
+      <div class="hidden md:flex items-center gap-1">
+        <a href="../index.html" class="px-4 py-2 rounded-full text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-all">首页</a>
+        <a href="../index.html#about" class="px-4 py-2 rounded-full text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-all">关于</a>
+        <a href="../index.html#values" class="px-4 py-2 rounded-full text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-all">产品</a>
+        <a href="../blog.html" class="px-4 py-2 rounded-full text-sm font-medium text-white bg-white/10 transition-all">博客</a>
+        <a href="../index.html#contact" class="px-4 py-2 rounded-full text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-all">联系</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="../index.html#contact" class="bg-primary hover:bg-primary-dark text-deep-navy font-heading font-bold text-sm px-5 py-2.5 rounded-full transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-primary/30">立即体验</a>
+        <button id="mobile-toggle" class="md:hidden p-2 rounded-lg hover:bg-white/10 transition-colors"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden mt-2 glass-card rounded-2xl p-4 space-y-1">
+      <a href="../index.html" class="block px-4 py-3 rounded-xl text-sm font-medium text-white/80 hover:text-white hover:bg-white/10">首页</a>
+      <a href="../blog.html" class="block px-4 py-3 rounded-xl text-sm font-medium text-white bg-white/10">博客</a>
+      <a href="../index.html#contact" class="block px-4 py-3 rounded-xl text-sm font-medium text-white/80 hover:text-white hover:bg-white/10">联系</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="relative pt-32 pb-16 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-coral-pink/30 via-deep-sea to-deep-navy"></div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <div class="inline-flex items-center gap-2 mb-4">
+        <a href="../blog.html" class="text-sm text-white/50 hover:text-primary transition-colors">&larr; 返回博客</a>
+      </div>
+      <div class="inline-flex items-center gap-2 bg-coral-pink/10 rounded-full px-4 py-1.5 mb-4">
+        <span class="text-xs font-semibold text-coral-pink uppercase tracking-wider">安全指南</span>
+      </div>
+      <h1 class="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white mb-4 leading-tight">企业支付安全指南：如何保护您的交易数据</h1>
+      <div class="flex items-center justify-center gap-4 text-sm text-white/40">
+        <span>21 4月, 2025</span>
+        <span class="w-1 h-1 bg-white/20 rounded-full"></span>
+        <span>约 14 分钟阅读</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="relative bg-deep-navy py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid lg:grid-cols-3 gap-10">
+        <article class="lg:col-span-2 glass-card rounded-3xl p-8 sm:p-10 prose-custom">
+
+          <p>在数字支付日益普及的今天，支付安全已成为企业运营中最关键的议题之一。每一笔在线交易都伴随着潜在的安全风险——从数据泄露、欺诈攻击到合规违规，任何安全漏洞都可能给企业带来难以估量的经济损失和声誉打击。特别是对于在印度市场开展业务的企业，面对复杂多样的支付渠道和不断演进的监管要求，构建一套完善的支付安全体系显得尤为迫切。本文将从技术架构、合规标准、风控策略和应急响应四个维度，为企业提供一份全面的支付安全实施指南。</p>
+
+          <h2>一、数据加密：构建支付安全的第一道防线</h2>
+          <p>加密技术是保护交易数据安全的基石。在支付系统中，数据加密需要覆盖传输加密和存储加密两个核心环节，确保敏感信息在任何状态下都处于保护之中。</p>
+          <h3>传输层加密</h3>
+          <p>所有支付相关的数据传输必须通过<strong>TLS 1.2或更高版本</strong>的安全协议进行加密。TLS协议能够在客户端和服务器之间建立一条加密通道，防止中间人攻击和数据窃听。企业应确保所有API端点强制使用HTTPS连接，禁用所有过时的SSL/TLS版本，并定期更新SSL证书。</p>
+          <p>对于API之间的通信，建议采用<strong>双向TLS认证（mTLS）</strong>，即客户端和服务器双方都需要验证对方的数字证书，这比单向TLS提供了更高级别的安全保障。在支付网关与商户系统之间的数据交换中，mTLS能有效防止未授权的系统接入。</p>
+          <h3>存储层加密</h3>
+          <p>对于存储在数据库中的敏感支付数据，必须实施<strong>AES-256</strong>等强加密算法进行静态加密。关键的加密最佳实践包括：</p>
+          <ul>
+            <li>卡号、CVV等敏感数据必须使用独立的加密密钥进行加密存储</li>
+            <li>加密密钥应存储在专用的硬件安全模块（HSM）中，与加密数据物理隔离</li>
+            <li>实施密钥轮换策略，定期更新加密密钥以降低密钥泄露风险</li>
+            <li>对数据库备份同样实施加密保护，防止备份数据泄露</li>
+          </ul>
+          <p>此外，<strong>令牌化（Tokenization）</strong>技术是保护卡号等敏感数据的重要手段。通过将真实卡号替换为无意义的令牌字符串，即使数据库遭到入侵，攻击者也无法获取原始支付信息。主流支付网关均已支持令牌化服务，企业应优先采用。</p>
+
+          <h2>二、PCI-DSS合规：支付安全的行业标准</h2>
+          <p>支付卡行业数据安全标准（PCI-DSS）是由国际卡组织联合制定的一套全球性安全标准，所有处理、存储或传输持卡人数据的企业都必须遵守。PCI-DSS 4.0是最新版本，引入了更灵活的安全控制方式和更严格的认证要求。</p>
+          <p>PCI-DSS合规涵盖以下六大核心领域：</p>
+          <ul>
+            <li><strong>构建和维护安全网络</strong>：部署防火墙、禁用默认密码、实施网络分段</li>
+            <li><strong>保护持卡人数据</strong>：加密存储和传输、最小化数据保留、实施访问控制</li>
+            <li><strong>维护漏洞管理程序</strong>：部署防病毒软件、及时应用安全补丁、进行安全开发</li>
+            <li><strong>实施强访问控制措施</strong>：基于角色的访问权限、唯一用户ID、物理访问限制</li>
+            <li><strong>定期监控和测试网络</strong>：全面的日志记录、定期安全测试、入侵检测系统</li>
+            <li><strong>维护信息安全策略</strong>：建立完整的安全政策体系、定期安全培训、风险评估流程</li>
+          </ul>
+          <blockquote>PCI-DSS合规不是一次性的认证，而是一个持续的过程。企业需要每年进行合规评估，并在系统发生重大变更时重新验证合规状态。</blockquote>
+          <p>对于中小型企业，可以通过使用合规的第三方支付网关来简化PCI-DSS合规流程。通过将支付数据的处理和存储外包给已通过PCI-DSS认证的服务商，企业可以大幅降低自身的合规范围和成本。</p>
+
+          <h2>三、欺诈检测与防范：智能风控体系</h2>
+          <p>支付欺诈是企业面临的持续性威胁，随着数字支付的普及，欺诈手段也变得越来越复杂和隐蔽。构建一套智能化的多层次欺诈检测体系，是保护企业和用户资金安全的关键。</p>
+          <h3>规则引擎：基于规则的初级防护</h3>
+          <p>规则引擎是欺诈检测的基础层，通过预设的业务规则对交易进行实时筛查。典型的风控规则包括：单笔交易金额超限告警、同一账户短时间内频繁交易、异常地理位置的交易请求、与历史交易模式显著偏离的行为等。虽然规则引擎存在灵活性不足的局限，但它能快速拦截明显的异常交易，是风控体系的第一道屏障。</p>
+          <h3>机器学习模型：智能化的高级防护</h3>
+          <p>基于机器学习的欺诈检测模型能够从海量交易数据中学习正常和异常的交易模式，实时评估每笔交易的风险概率。与规则引擎相比，ML模型具有以下优势：</p>
+          <ul>
+            <li>能够识别复杂的、多维度的欺诈模式，发现规则引擎难以覆盖的异常行为</li>
+            <li>具备自学习能力，能够持续适应新的欺诈手段和变化的交易模式</li>
+            <li>大幅降低误报率，减少对正常交易的干扰，提升用户体验</li>
+            <li>支持实时评分，在毫秒级别内完成风险评估，不影响交易速度</li>
+          </ul>
+          <p>企业应将规则引擎和ML模型结合使用，构建多层次、互补的风控体系。同时，建立专业的人工审核团队处理灰色区域的交易，确保在安全和用户体验之间取得平衡。</p>
+
+          <h2>四、多因素认证（MFA）：强化身份验证</h2>
+          <p>多因素认证通过要求用户提供两种或以上的身份验证因素，大幅提升了账户和交易的安全性。在支付场景中，MFA已从可选措施变为必要配置。</p>
+          <p>常见的认证因素包括三个类别：</p>
+          <ul>
+            <li><strong>知识因素（Something you know）</strong>：密码、PIN码、安全问题等用户已知的信息</li>
+            <li><strong>持有因素（Something you have）</strong>：手机OTP、硬件令牌、安全密钥等用户持有的设备或物品</li>
+            <li><strong>生物因素（Something you are）</strong>：指纹、面部识别、虹膜扫描等生物特征</li>
+          </ul>
+          <p>在印度支付环境中，RBI已强制要求在线交易必须实施<strong>附加因素认证（AFA）</strong>。对于卡支付交易，3D Secure 2.0协议通过风险自适应认证机制，在高风险交易中触发额外验证，而对低风险交易则实现无感认证，有效平衡了安全性和便捷性。</p>
+          <p>对于UPI交易，PIN码验证是必需的认证步骤。企业在集成UPI支付时，需要确保PIN输入界面的安全性，防止PIN码被截获或篡改。同时，建议在大额交易或敏感操作中增加额外的认证步骤。</p>
+
+          <h2>五、数据保护最佳实践</h2>
+          <p>除了加密和认证之外，企业还需要在数据管理的各个环节实施全面的保护措施，形成纵深防御体系。</p>
+          <h3>最小化数据收集与保留</h3>
+          <p>企业应遵循数据最小化原则，只收集业务确实需要的支付数据，并在不再需要时及时安全地销毁。根据印度数据保护法（DPDPA）和PCI-DSS要求，CVV码在授权完成后不得存储，完整卡号应在业务需要消失后及时删除。建立明确的数据保留策略，并通过自动化工具确保执行。</p>
+          <h3>网络安全架构</h3>
+          <p>支付系统应部署在隔离的网络环境中，与企业其他业务系统保持严格的网络分段。部署Web应用防火墙（WAF）保护支付接口免受SQL注入、XSS等常见攻击。实施入侵检测和防御系统（IDS/IPS），对异常网络流量进行实时监控和阻断。</p>
+          <blockquote>安全不是产品，而是一个过程。即使部署了最先进的安全技术，也需要持续的监控、更新和优化来应对不断演进的威胁。</blockquote>
+          <h3>安全审计与合规监控</h3>
+          <p>建立全面的日志记录机制，记录所有与支付相关的访问和操作行为。通过SIEM（安全信息与事件管理）系统对日志进行集中分析，及时发现异常活动。定期进行渗透测试和安全审计，发现并修复系统漏洞。</p>
+
+          <h2>六、事件响应：当安全事件发生时</h2>
+          <p>即使拥有最完善的防护体系，安全事件仍然可能发生。一套成熟的事件响应计划能够帮助企业在安全事件发生时快速反应，最大限度地减少损失。</p>
+          <p>有效的事件响应流程包含以下六个阶段：</p>
+          <ol>
+            <li><strong>准备阶段</strong>：组建专业的事件响应团队，制定详细的响应预案，定期进行模拟演练，确保团队成员清楚各自的职责和流程。</li>
+            <li><strong>检测与分析</strong>：通过监控系统和告警机制及时发现安全事件，对事件的性质、范围和影响进行快速评估和分类。</li>
+            <li><strong>遏制措施</strong>：在最短时间内隔离受影响的系统和数据，防止事件进一步扩散。根据事件严重程度采取不同级别的遏制策略。</li>
+            <li><strong>根除威胁</strong>：彻底清除导致安全事件的根因，包括恶意代码、被入侵的账户和系统后门。</li>
+            <li><strong>恢复运营</strong>：在确认威胁已被彻底清除后，逐步恢复受影响的系统和服务，并持续监控确保安全。</li>
+            <li><strong>事后总结</strong>：全面复盘安全事件的原因、处置过程和效果，总结经验教训，更新防护策略和响应预案。</li>
+          </ol>
+          <p>在印度运营的企业还需注意合规报告义务。根据RBI和CERT-In的规定，特定类型的安全事件必须在规定时限内向监管机构报告。企业应将合规报告纳入事件响应流程，确保及时履行法定义务。</p>
+          <p>支付安全是一项持续的投资，而非一次性的支出。通过建立多层次的防护体系、遵循行业合规标准、部署智能风控系统、制定完善的应急预案，企业能够在快速发展的数字支付环境中有效保护自己和客户的资金与数据安全。在印度这个充满机遇的市场中，坚实的支付安全基础将成为企业赢得客户信任和实现长期增长的关键竞争优势。</p>
+
+        </article>
+        <aside class="space-y-6">
+          <div class="glass-card rounded-3xl p-6 sticky top-24">
+            <h3 class="font-heading font-bold text-white text-lg mb-4">相关文章</h3>
+            <div class="space-y-4">
+              <a href="india-payment.html" class="block group">
+                <div class="flex items-start gap-3">
+                  <div class="w-2 h-2 mt-2 rounded-full bg-primary flex-shrink-0"></div>
+                  <div>
+                    <p class="text-sm text-white/70 group-hover:text-white transition-colors leading-snug">印度支付生态系统全景解析</p>
+                    <span class="text-xs text-white/30">行业概览</span>
+                  </div>
+                </div>
+              </a>
+              <a href="fast-payment-processing.html" class="block group">
+                <div class="flex items-start gap-3">
+                  <div class="w-2 h-2 mt-2 rounded-full bg-electric-blue flex-shrink-0"></div>
+                  <div>
+                    <p class="text-sm text-white/70 group-hover:text-white transition-colors leading-snug">为什么快速支付处理对企业至关重要</p>
+                    <span class="text-xs text-white/30">企业效率</span>
+                  </div>
+                </div>
+              </a>
+              <a href="digital-payment-trends-2025.html" class="block group">
+                <div class="flex items-start gap-3">
+                  <div class="w-2 h-2 mt-2 rounded-full bg-tropical-teal flex-shrink-0"></div>
+                  <div>
+                    <p class="text-sm text-white/70 group-hover:text-white transition-colors leading-snug">2025年数字支付趋势：企业如何把握支付创新机遇</p>
+                    <span class="text-xs text-white/30">趋势洞察</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="glass-card rounded-3xl p-6 text-center">
+            <div class="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <h4 class="font-heading font-bold text-white mb-2">需要支付解决方案？</h4>
+            <p class="text-sm text-white/40 mb-4">联系我们获取专业的印度支付服务</p>
+            <a href="../index.html#contact" class="inline-block bg-primary hover:bg-primary-dark text-deep-navy font-heading font-bold text-sm px-6 py-2.5 rounded-full transition-all hover:scale-105"><span class="cta-consult" aria-label="立即咨询"></span></a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-deep-sea border-t border-white/5">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10">
+      <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="text-xs text-white/30">版权 &copy; 2026 印度支付-最全支付资讯-专业一站式支付服务</p>
+        <div class="flex items-center gap-4">
+          <a href="../index.html" class="text-xs text-white/30 hover:text-primary transition-colors">首页</a>
+          <a href="../blog.html" class="text-xs text-white/30 hover:text-primary transition-colors">博客</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" class="fixed bottom-6 right-6 z-50 w-12 h-12 bg-primary hover:bg-primary-dark text-deep-navy rounded-full shadow-lg shadow-primary/30 flex items-center justify-center transition-all duration-300 opacity-0 translate-y-4 pointer-events-none"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg></button>
+
+  <script>
+    const nb = document.getElementById('navbar').querySelector(':first-child');
+    window.addEventListener('scroll', () => nb.classList.toggle('navbar-scrolled', window.scrollY > 50));
+    document.getElementById('mobile-toggle').addEventListener('click', () => document.getElementById('mobile-menu').classList.toggle('hidden'));
+    const btt = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => { const s = window.scrollY > 500; btt.classList.toggle('opacity-0',!s); btt.classList.toggle('translate-y-4',!s); btt.classList.toggle('pointer-events-none',!s); });
+    btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  </script>
+</body>
+</html>

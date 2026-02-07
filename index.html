@@ -76,7 +76,8 @@
     .cta-glow{position:relative;overflow:hidden}.cta-glow::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:conic-gradient(transparent,rgba(255,255,255,0.1),transparent 30%);animation:spin 4s linear infinite}
     @keyframes spin{100%{transform:rotate(360deg)}}
     /* Mega dropdown */
-    .mega-dropdown{opacity:0;visibility:hidden;transform:translateY(10px);transition:all .25s ease;pointer-events:none}
+    .mega-dropdown{opacity:0;visibility:hidden;transform:translateY(10px);transition:all .3s ease;pointer-events:none;padding-top:18px}
+    .mega-dropdown::before{content:'';position:absolute;top:0;left:0;right:0;height:18px;background:transparent}
     .dropdown-parent:hover .mega-dropdown{opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto}
     .dropdown-parent:hover>a,.dropdown-parent:hover>button{color:#fff;background:rgba(255,255,255,0.1)}
     /* Telegram floating badge */
@@ -126,7 +127,8 @@
             <svg class="w-3.5 h-3.5 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
           </button>
           <!-- Mega Dropdown Panel -->
-          <div class="mega-dropdown absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[700px] glass-card rounded-2xl p-6 shadow-2xl shadow-black/30">
+          <div class="mega-dropdown absolute top-full left-1/2 -translate-x-1/2 w-[700px]">
+            <div class="glass-card rounded-2xl p-6 shadow-2xl shadow-black/30">
             <div class="grid grid-cols-4 gap-6">
               <!-- 南亚 -->
               <div>
@@ -181,6 +183,7 @@
                 <span class="cta-tg-dropdown" aria-label="咨询 @zfxt5"></span>
               </a>
             </div>
+          </div>
           </div>
         </div>
 
